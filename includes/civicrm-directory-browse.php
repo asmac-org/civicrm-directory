@@ -139,7 +139,7 @@ class CiviCRM_Directory_Browse {
 			}
 
 			// Add listing.
-			$markup .= $this->get_listing_markup( $this->results, $letter, $post_id );
+			$markup .= $this->get_listing_markup( $this->results, $post_id, $letter );
 
 			// Add to array.
 			$data['listing'] = $markup;
@@ -340,7 +340,7 @@ $class = ' current';
 		}
 
 		// Get listing markup.
-		$markup .= $this->get_listing_markup( $results, $letter, $post_id );
+		$markup .= $this->get_listing_markup( $results, $post_id, $letter );
 
 		// Add to data array.
 		$data['listing'] = $markup;
@@ -447,7 +447,7 @@ $class = ' current';
 	 * @param int $post_id The numeric ID of the current post/page.
 	 * @return str $markup The listing markup.
 	 */
-	public function get_listing_markup( $results, $letter = 'ALL', $post_id ) {
+	public function get_listing_markup( $results, $post_id, $letter = 'ALL') {
 
 		// Init return.
 		$markup = '';
